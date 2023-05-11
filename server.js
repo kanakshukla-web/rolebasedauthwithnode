@@ -10,6 +10,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // api routes
+app.get('/', (req, res) => {
+    res.send("Welcome Kanak !! to the Node Auth Services !!")
+})
 app.use('/users', require('./users/users.controller'));
 
 // global error handler
