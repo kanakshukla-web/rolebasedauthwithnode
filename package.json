@@ -8,7 +8,7 @@
         "url": "https://github.com/cornflourblue/node-role-based-authorization-api.git"
     },
     "scripts": {
-        "start": "nodemon server.js"
+        "start": "node server.js"
     },
     "dependencies": {
         "body-parser": "^1.18.3",
@@ -17,8 +17,5 @@
         "express-jwt": "^6.0.0",
         "jsonwebtoken": "^8.4.0",
         "rootpath": "^0.1.2"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.4"
     }
 }
