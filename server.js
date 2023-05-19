@@ -1,4 +1,8 @@
-﻿require('rootpath')();
+﻿const appInsights = require('applicationinsights');
+appInsights.setup("InstrumentationKey=41c532d4-bf37-4574-8c20-efd550d3c85f;IngestionEndpoint=https://southeastasia-1.in.applicationinsights.azure.com/;LiveEndpoint=https://southeastasia.livediagnostics.monitor.azure.com/")
+appInsights.start();
+
+require('rootpath')();
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -13,6 +17,10 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.send("Welcome Kanak !! to the Node Auth Services !!")
 })
+app.get('/home', (req, res) => {
+    res.send("Welcome to Home Route!!")
+})
+
 app.use('/users', require('./users/users.controller'));
 
 // global error handler
